@@ -25,8 +25,12 @@ SECRET_KEY = 'django-insecure-j9%xff4!@1@-t62&mjy066$i8bhq^8!lka8az_=+xn&)*dxz#5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = [
+    "ab-erectors-production.up.railway.app",
+    "www.aberectors.in",
+    "aberectors.in",
+]
 
 # Application definition
 
