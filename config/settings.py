@@ -1,11 +1,12 @@
 
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-j9%xff4!@1@-t62&mjy066$i8bhq^8!lka8az_=+xn&)*dxz#5'
 
-DEBUG = True
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "ab-erectors-production.up.railway.app",
