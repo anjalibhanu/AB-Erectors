@@ -6,12 +6,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "ab-erectors-production.up.railway.app",
     "www.aberectors.in",
     "aberectors.in",
+     "127.0.0.1",
+    "localhost",
 ]
 
 # Application definition
@@ -86,11 +88,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'website' / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
